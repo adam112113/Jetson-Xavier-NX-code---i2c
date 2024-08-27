@@ -12,7 +12,7 @@ constexpr int BASE_ADDR = 0x38;
 constexpr int ADDR_OFFSETS[] = {0, 1, 2, 3};
 
 // I2C bus path, typically i2c-1 on Jetson Xavier NX
-constexpr const char* I2C_BUS = "/dev/i2c-1";
+constexpr const char* I2C_BUS = "/dev/i2c-8";
 
 // Constructor for the PCF8574AController class
 PCF8574AController::PCF8574AController(int setup) : setup(setup) {
