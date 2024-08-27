@@ -10,6 +10,18 @@
 //    }
 //}
 
+// Create an instance of the controller for each setup
+    PCF8574AController controller1(0);
+    PCF8574AController controller2(1);
+    PCF8574AController controller3(2);
+    PCF8574AController controller4(3);
+
+ // Initialize all controllers
+    controller1.initialize();
+    controller2.initialize();
+    controller3.initialize();
+    controller4.initialize();
+
 void turnOnLED(PCF8574AController& controller, int ledIndex, int state) {
     // The ledIndex parameter corresponds to the pin on the PCF8574A (0-3 for each controller)
     // The state parameter is either 1 (turn LED on) or 0 (turn LED off)
@@ -52,17 +64,9 @@ void input_percentage(int percentage) {
 
 int main() {
     
-    // Create an instance of the controller for each setup
-    PCF8574AController controller1(0);
-    PCF8574AController controller2(1);
-    PCF8574AController controller3(2);
-    PCF8574AController controller4(3);
+    
 
-    // Initialize all controllers
-    controller1.initialize();
-    controller2.initialize();
-    controller3.initialize();
-    controller4.initialize();
+   
 
     for(int i = 0; i <= 100; i++)
     {
