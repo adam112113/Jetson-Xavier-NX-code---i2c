@@ -17,10 +17,10 @@
     PCF8574AController controller4(3);
 
  // Initialize all controllers
-    controller1.initialize();
-    controller2.initialize();
-    controller3.initialize();
-    controller4.initialize();
+// controller1.initialize();
+   // controller2.initialize();
+    //controller3.initialize();
+    //controller4.initialize();
 
 void turnOnLED(PCF8574AController& controller, int ledIndex, int state) {
     // The ledIndex parameter corresponds to the pin on the PCF8574A (0-3 for each controller)
