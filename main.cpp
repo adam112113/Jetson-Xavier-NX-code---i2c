@@ -24,16 +24,16 @@ void turnOnLED(PCF8574AController& controller, int ledIndex, int state);
     //controller3.initialize();
     //controller4.initialize();
 int main() {
-    int percentage = 50;
+    //int percentage = 50;
 
-    input_percentage(percentage);
-    /*
+    //input_percentage(percentage);
+    ///*
     for(int i = 0; i <= 100; i++)
     {
         input_percentage(i);
         //std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
-    */
+    //*/
     return 0;
 }
 
