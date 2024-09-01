@@ -9,6 +9,8 @@
 //        //std::this_thread::sleep_for(std::chrono::milliseconds(500));
 //    }
 //}
+void input_percentage(int percentage);
+void turnOnLED(PCF8574AController& controller, int ledIndex, int state);
 
 // Create an instance of the controller for each setup
     PCF8574AController controller1(0);
@@ -21,6 +23,16 @@
    // controller2.initialize();
     //controller3.initialize();
     //controller4.initialize();
+int main() {
+
+    for(int i = 0; i <= 100; i++)
+    {
+        input_percentage(i);
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    }
+    
+    return 0;
+}
 
 void turnOnLED(PCF8574AController& controller, int ledIndex, int state) {
     // The ledIndex parameter corresponds to the pin on the PCF8574A (0-3 for each controller)
@@ -62,17 +74,4 @@ void input_percentage(int percentage) {
 }
 
 
-int main() {
-    
-    
 
-   
-
-    for(int i = 0; i <= 100; i++)
-    {
-        input_percentage(i);
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    }
-    
-    return 0;
-}
