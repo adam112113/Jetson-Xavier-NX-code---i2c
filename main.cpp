@@ -24,7 +24,7 @@ void turnOnLED(PCF8574AController& controller, int ledIndex, int state);
     //controller3.initialize();
     //controller4.initialize();
 int main() {
-    int precentage = 50;
+    int percentage = 50;
 
     input_percentage(percentage);
     /*
