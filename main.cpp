@@ -26,7 +26,7 @@ void turnOnLED(PCF8574AController& controller, int ledIndex, int state);
 int main() {
     int precentage = 50;
 
-    input_precentage(percentage);
+    input_percentage(percentage);
     /*
     for(int i = 0; i <= 100; i++)
     {
