@@ -31,7 +31,7 @@ int main() {
     for(int i = 0; i <= 100; i++)
     {
         input_percentage(i);
-        //std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
     //*/
     return 0;
@@ -55,9 +55,9 @@ void input_percentage(int percentage) {
         int ledState = (i < ledsOn) ? 0 : 1; // Turn on LEDs if within the range, else turn off
         //int ledState;
         //if (i < ledsOn) {
-        //ledState = 1;  // Turn on the LED
+        //ledState = 0;  // Turn on the LED
         //} else {
-        //ledState = 0;  // Turn off the LED
+        //ledState = 1;  // Turn off the LED
         //}
 
         if (i < 4) {
