@@ -54,7 +54,7 @@ void input_percentage(int percentage) {
 
     // Loop through all LEDs and turn them on based on the calculated number
     for (int i = 0; i < totalLEDs; i++) {
-        int ledState = (i < ledsOn) ? 0 : 1; // Turn on LEDs if within the range, else turn off
+        int ledState = (i < ledsOn) ? 1 : 0; // Turn on LEDs if within the range, else turn off
         //int ledState;
         //if (i < ledsOn) {
         //ledState = 0;  // Turn on the LED
