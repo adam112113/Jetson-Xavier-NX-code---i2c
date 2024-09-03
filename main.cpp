@@ -18,12 +18,14 @@ void turnOnLED(PCF8574AController& controller, int ledIndex, int state);
     PCF8574AController controller3(2);
     PCF8574AController controller4(3);
 
- // Initialize all controllers
-// controller1.initialize();
-   // controller2.initialize();
-    //controller3.initialize();
-    //controller4.initialize();
+
 int main() {
+     // Initialize all controllers
+    controller1.initialize();
+    controller2.initialize();
+    controller3.initialize();
+    controller4.initialize();
+    
     //int percentage = 50;
 
     //input_percentage(percentage);
@@ -62,16 +64,16 @@ void input_percentage(int percentage) {
 
         if (i < 4) {
             // First LED strip (controller1)
-            turnOnLED(controller1, i, 0);
+            turnOnLED(controller1, i, ledState);
         } else if (i < 8) {
             // Second LED strip (controller2)
-            turnOnLED(controller2, i - 4, 0);
+            turnOnLED(controller2, i - 4, ledState);
         } else if (i < 12) {
             // Third LED strip (controller3)
-            turnOnLED(controller3, i - 8, 0);
+            turnOnLED(controller3, i - 8, ledState);
         } else if (i < 16) {
             // Fourth LED strip (controller4)
-            turnOnLED(controller4, i - 12, 0);
+            turnOnLED(controller4, i - 12, ledState);
         }
     }
 }
